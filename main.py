@@ -75,7 +75,8 @@ async def handle_form(
     email: str = Form(...),
     message: str = Form(...),
     color: str = Form(...),
-    interests: List[str] = Form(default=[])
+    interests: List[str] = Form(default=[]),
+    thoughts: List[str] = Form(default = [])
     
 ):
     """Handle the form submission from index.html"""
@@ -86,7 +87,8 @@ async def handle_form(
             "email": email,
             "message": message,
             "favorite_color": color,
-            "interests": interests
+            "interests": interests,
+            "thoughts": thoughts
         }
     }
 
